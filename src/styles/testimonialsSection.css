@@ -1,0 +1,852 @@
+/* =========================================================
+   TESTIMONIALS SECTION
+   GREEN → DARK GREEN → BLACK
+
+   IMPORTANT:
+   - NO IMAGE
+   - NO RADIAL GRADIENT
+   - NO LEFT/RIGHT GRADIENT
+   - SAME TRANSITION ACROSS ENTIRE WIDTH
+
+   TOP:
+   Inherits the exact background from .green-flow
+
+   MIDDLE:
+   Darkening begins early
+
+   BOTTOM:
+   Completely black
+========================================================= */
+
+.testimonials-section {
+  position: relative;
+
+  width: 100%;
+
+  padding: 80px 32px 70px;
+
+  /*
+     DO NOT ADD A BACKGROUND HERE.
+
+     The background comes from .green-flow.
+     This keeps the top perfectly connected to
+     the Capabilities section.
+  */
+  background: transparent;
+
+  font-family:
+    "Avenir Next",
+    "Helvetica Neue",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  color: #101b16;
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   MAIN DARK TRANSITION
+
+   0–25%
+   Completely transparent.
+
+   30–40%
+   Darkening starts.
+
+   40–65%
+   Strong dark-green transition.
+
+   65–85%
+   Very dark.
+
+   85–100%
+   Black.
+
+   IMPORTANT:
+   This is ONLY a vertical gradient.
+   Therefore LEFT = RIGHT exactly.
+========================================================= */
+
+.testimonials-section::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+
+      /* =========================================
+         TOP — FULLY TRANSPARENT
+      ========================================= */
+
+      rgba(0, 0, 0, 0) 0%,
+
+      rgba(0, 0, 0, 0) 18%,
+
+      rgba(0, 0, 0, 0) 27%,
+
+      /*
+         Very tiny beginning of darkness
+      */
+      rgba(0, 0, 0, 0.015) 33%,
+
+      /* =========================================
+         BLACK STARTS EARLIER
+      ========================================= */
+
+      rgba(0, 4, 2, 0.06) 38%,
+
+      rgba(0, 5, 3, 0.13) 44%,
+
+      rgba(0, 6, 4, 0.23) 50%,
+
+      /*
+         =========================================
+         DARK GREEN
+      =========================================
+      */
+
+      rgba(0, 6, 4, 0.36) 57%,
+
+      rgba(0, 5, 3, 0.50) 64%,
+
+      rgba(0, 4, 3, 0.64) 71%,
+
+      /*
+         =========================================
+         VERY DARK
+      =========================================
+      */
+
+      rgba(0, 3, 2, 0.76) 78%,
+
+      rgba(0, 2, 1, 0.87) 84%,
+
+      /*
+         =========================================
+         ALMOST BLACK
+      =========================================
+      */
+
+      rgba(0, 1, 1, 0.95) 91%,
+
+      rgba(0, 0, 0, 0.985) 96%,
+
+      /*
+         =========================================
+         FULL BLACK
+      =========================================
+      */
+
+      #000000 100%
+    );
+}
+
+
+/* =========================================================
+   NO SECONDARY EFFECTS
+
+   This is intentional.
+
+   DO NOT use:
+   - radial-gradient
+   - image
+   - glow
+   - side gradient
+   - right gradient
+   - left gradient
+========================================================= */
+
+.testimonials-section::after {
+  display: none;
+  content: none;
+}
+
+
+/* =========================================================
+   CONTENT LAYER
+========================================================= */
+
+.testimonials-heading,
+.testimonials-container {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.testimonials-heading {
+  width: 100%;
+
+  max-width: 850px;
+
+  margin: 0 auto 40px;
+
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.testimonials-heading .heading-eyebrow {
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.38em;
+
+  text-transform: uppercase;
+
+  color: #1c3529;
+
+  margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.testimonials-main-heading {
+  margin: 0;
+
+  font-size: clamp(32px, 4vw, 46px);
+
+  line-height: 1.08;
+
+  font-weight: 300;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  color: #101b16;
+}
+
+
+/* =========================================================
+   SUBHEADING
+========================================================= */
+
+.testimonials-subheading {
+  max-width: 640px;
+
+  margin: 14px auto 0;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+
+  font-weight: 400;
+
+  letter-spacing: 0.02em;
+
+  color: #30483d;
+}
+
+
+/* =========================================================
+   ORANGE HEADING LINE
+========================================================= */
+
+.testimonials-heading .heading-line {
+  width: 46px;
+
+  height: 2px;
+
+  margin-top: 20px;
+
+  background: #ed6b17;
+
+  border-radius: 2px;
+}
+
+
+/* =========================================================
+   TESTIMONIAL CONTAINER
+========================================================= */
+
+.testimonials-container {
+  width: 100%;
+
+  max-width: 1240px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 35px;
+}
+
+
+/* =========================================================
+   TESTIMONIAL GRID
+========================================================= */
+
+.testimonials-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(320px, 1fr)
+    );
+
+  gap: 26px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   TESTIMONIAL CARD
+========================================================= */
+
+.testimonial-card {
+  position: relative;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(21, 56, 43, 0.90) 0%,
+      rgba(16, 44, 34, 0.97) 100%
+    );
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 20px;
+
+  padding: 32px 28px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.28);
+
+  backdrop-filter: blur(14px);
+
+  -webkit-backdrop-filter: blur(14px);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(237, 107, 23, 0.45);
+
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.40);
+}
+
+
+/* =========================================================
+   FEATURED CARD
+========================================================= */
+
+.testimonial-card.is-featured {
+  border-color: #ed6b17;
+
+  box-shadow:
+    0 14px 36px rgba(237, 107, 23, 0.20);
+}
+
+
+/* =========================================================
+   CARD TOP ROW
+========================================================= */
+
+.card-top-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   TESTIMONIAL TAG
+========================================================= */
+
+.testimonial-tag {
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  color: #ed6b17;
+
+  background:
+    rgba(237, 107, 23, 0.12);
+
+  border:
+    1px solid rgba(237, 107, 23, 0.25);
+
+  padding: 4px 10px;
+
+  border-radius: 16px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   STAR RATING
+========================================================= */
+
+.star-rating {
+  display: flex;
+
+  gap: 4px;
+
+  flex-shrink: 0;
+}
+
+
+.star-icon {
+  color: #fbbf24;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   QUOTE ICON
+========================================================= */
+
+.quote-icon-box {
+  color:
+    rgba(237, 107, 23, 0.42);
+
+  font-size: 22px;
+
+  margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   QUOTE TEXT
+
+   CARD IS DARK → KEEP TEXT LIGHT
+========================================================= */
+
+.testimonial-quote {
+  font-size: 14px;
+
+  line-height: 1.65;
+
+  color: #e2f1ea;
+
+  font-weight: 400;
+
+  margin: 0 0 24px 0;
+
+  flex-grow: 1;
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.testimonial-profile {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  padding-top: 18px;
+}
+
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+.profile-avatar {
+  width: 48px;
+
+  height: 48px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border:
+    2px solid rgba(237, 107, 23, 0.60);
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   PROFILE INFO
+========================================================= */
+
+.profile-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   PROFILE NAME
+========================================================= */
+
+.profile-name {
+  margin: 0;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   PROFILE ROLE
+========================================================= */
+
+.profile-role {
+  margin: 0;
+
+  font-size: 12px;
+
+  color: #a7f3d0;
+}
+
+
+/* =========================================================
+   PROFILE ORGANISATION
+========================================================= */
+
+.profile-org {
+  font-size: 11px;
+
+  color: #8bb3a0;
+}
+
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.testimonials-controls {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 10px;
+}
+
+
+/* =========================================================
+   CONTROL BUTTON
+========================================================= */
+
+.control-btn {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 40px;
+
+  height: 40px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.16);
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* =========================================================
+   CONTROL HOVER
+========================================================= */
+
+.control-btn:hover {
+  background: #ed6b17;
+
+  border-color: #ed6b17;
+
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   CAROUSEL DOTS
+========================================================= */
+
+.carousel-dots {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+/* =========================================================
+   DOT
+========================================================= */
+
+.dot {
+  width: 10px;
+
+  height: 10px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  background:
+    rgba(255, 255, 255, 0.25);
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  padding: 0;
+}
+
+
+/* =========================================================
+   ACTIVE DOT
+========================================================= */
+
+.dot.active {
+  background: #ed6b17;
+
+  width: 24px;
+
+  border-radius: 12px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 960px) {
+
+  .testimonials-section {
+    padding: 65px 24px 60px;
+  }
+
+
+  .testimonials-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .testimonials-section {
+    padding: 50px 20px 45px;
+  }
+
+
+  .testimonials-heading {
+    margin-bottom: 30px;
+  }
+
+
+  .testimonials-main-heading {
+    font-size: 30px;
+
+    line-height: 1.15;
+
+    letter-spacing: 0.09em;
+  }
+
+
+  .testimonials-subheading {
+    font-size: 12.5px;
+
+    line-height: 1.6;
+  }
+
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .testimonial-card {
+    padding: 26px 22px;
+
+    border-radius: 18px;
+  }
+
+
+  .testimonial-quote {
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+
+  .profile-name {
+    font-size: 14px;
+  }
+
+
+  .profile-role {
+    font-size: 11px;
+  }
+
+
+  .profile-org {
+    font-size: 10px;
+  }
+
+
+  .testimonials-controls {
+    gap: 14px;
+
+    margin-top: 5px;
+  }
+
+
+  .control-btn {
+    width: 36px;
+
+    height: 36px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .testimonials-section {
+    padding: 40px 16px 40px;
+  }
+
+
+  .testimonials-main-heading {
+    font-size: 25px;
+
+    letter-spacing: 0.07em;
+  }
+
+
+  .testimonials-subheading {
+    font-size: 12px;
+  }
+
+
+  .testimonial-card {
+    padding: 22px 18px;
+  }
+
+
+  .testimonial-tag {
+    font-size: 8.5px;
+
+    padding: 4px 8px;
+  }
+
+
+  .testimonial-quote {
+    font-size: 12px;
+  }
+}
