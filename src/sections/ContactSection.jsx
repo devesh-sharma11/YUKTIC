@@ -54,7 +54,7 @@ const ContactSection = () => {
           </div>
           
           <h3 className="contact-heading">
-            Let’s build something <span className="highlight-text">impactful</span> together.
+            Let’s build something <span className="highlight-text2">impactful</span> together.
           </h3>
           
           <div className="heading-line contact-line"></div>

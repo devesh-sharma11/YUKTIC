@@ -31,14 +31,14 @@ const FixedbackgroundSection = () => {
   return (
     <section
       ref={containerRef}
-      className="fixed-story-wrapper"
+      className="fixed-story-wrapper2"
       style={{ backgroundImage: `url(${fixedImg})` }}
     >
       {/* =====================================================
           STEP 1 — CAREER / IMPACT
       ===================================================== */}
       <div className="story-step story-step-one">
-        <div className="story-content">
+        <div className="story-content2">
           <span className="story-eyebrow">BUILD WITH PURPOSE</span>
           <div className="story-line"></div>
 
@@ -68,7 +68,7 @@ const FixedbackgroundSection = () => {
           STEP 2 — VISION / EXECUTION
       ===================================================== */}
       <div className="story-step story-step-two">
-        <div className="story-content">
+        <div className="story-content2">
           <span className="story-eyebrow">THINK BIG. MOVE FORWARD.</span>
           <div className="story-line"></div>
 
@@ -99,7 +99,7 @@ const FixedbackgroundSection = () => {
           STEP 3 — PARTNERSHIP / PROJECTS
       ===================================================== */}
       <div className="story-step story-step-three">
-        <div className="story-content">
+        <div className="story-content2">
           <span className="story-eyebrow">PARTNERS IN PROGRESS</span>
           <div className="story-line"></div>
 

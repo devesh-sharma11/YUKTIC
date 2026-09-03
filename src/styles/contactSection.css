@@ -150,9 +150,9 @@
   max-width: 520px;
 }
 
-.highlight-text {
+.highlight-text2 {
   font-weight: 600;
-  background: linear-gradient(135deg, #17382b 30%, #ed6b17 100%);
+  background: linear-gradient(135deg, #17382b 30%, #3cb007 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -161,7 +161,7 @@
   margin: 22px auto 24px;
   width: 54px;
   height: 3px;
-  background: linear-gradient(90deg, #ed6b17 0%, rgba(237, 107, 23, 0.2) 100%);
+  background: linear-gradient(90deg, #16ac0b 0%, rgba(237, 107, 23, 0.2) 100%);
   border-radius: 3px;
 }
 

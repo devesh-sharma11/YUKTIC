@@ -67,27 +67,7 @@ const projectData = [
     liveLink: "#",
     githubLink: "#",
   },
-  {
-    id: 4,
-    num: "4",
-    accentColor: "#10b981",
-    category: "HealthTech / EHR",
-    title: "Enterprise Clinical Data Migration & Interoperability",
-    subtitle: "High-Scale National Health Dataset Integration",
-    description:
-      "Delivering near real-time, event-driven interoperability between central healthcare databases and clinical records with zero downtime.",
-    challenges: ["National Dataset", "Zero Data Loss", "Event Messaging"],
-    impactStats: [
-      { label: "DE-DUPED RECORDS", value: "350K+" },
-      { label: "DOWNTIME", value: "0 mins" },
-      { label: "DATA ACCURACY", value: "100%" },
-    ],
-    detailedCase:
-      "Engineered automated ETL data translation microservices ensuring strict regulatory compliance across multiple hospital networks. Integrated asynchronous queue brokers for resilient message delivery during peak operational traffic.",
-    tags: ["React", "FHIR", "Node.js", "PostgreSQL", "Kafka"],
-    liveLink: "#",
-    githubLink: "#",
-  },
+  
 ];
 
 export default function ProjectsSection() {
@@ -146,7 +126,7 @@ export default function ProjectsSection() {
           ))}
         </div>
 
-        {/* PROJECT GRID (2 CARDS PER ROW - FIXED FULL INFO) */}
+        {/* PROJECT GRID (3 CARDS PER ROW) */}
         <div className="projects-grid">
           {filteredProjects.map((project) => (
             <div key={project.id} className="project-card">
@@ -213,12 +193,6 @@ export default function ProjectsSection() {
                     <span className="stat-label">{stat.label}</span>
                   </div>
                 ))}
-              </div>
-
-              {/* FIXED ARCHITECTURE & EXECUTION BOX */}
-              <div className="project-expanded-detail">
-                <span className="expanded-title">ARCHITECTURE & EXECUTION</span>
-                <p>{project.detailedCase}</p>
               </div>
 
               {/* TECH TAGS */}

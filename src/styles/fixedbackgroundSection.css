@@ -3,7 +3,7 @@
 /* =========================================================
    FIXED STORY SECTION (TOP / BOTTOM & INTER-SECTION SPACING)
 ========================================================= */
-.fixed-story-wrapper {
+.fixed-story-wrapper2 {
   position: relative;
   width: 100%;
   
@@ -42,7 +42,7 @@
 /* =========================================================
    ALL CONTENT CENTERED
 ========================================================= */
-.story-content {
+.story-content2 {
   position: relative;
   width: 100%;
   max-width: 920px;

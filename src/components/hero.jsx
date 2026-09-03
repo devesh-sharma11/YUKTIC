@@ -5,7 +5,7 @@ import React, {
 } from "react";
 
 import Yuktic from "../assets/Yuktic.png";
-import LightHeartSection from "../sections/LightHeartSection";
+import LightHeartSection from "../sections/HeroSection";
 import CapabilitiesSection from '../sections/CapabilitiesSection';
 import ProjectsSection from "../sections/ProjectsSection";
 import TestimonialsSection from "../sections/TestimonialsSection";
@@ -131,7 +131,7 @@ const Hero = ({ onLogoAnimationComplete }) => {
               <span>Home</span>
               <span>About</span>
               <span>Our Services</span>
-              <span>Career</span>
+            
               <span>Jobs</span>
               <span>Article</span>
               <span className="fake-contact">Contact</span>
